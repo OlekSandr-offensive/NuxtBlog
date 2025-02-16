@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import { fetchPosts } from "../../services/api";
+import { fetchPosts } from '../../services/api';
 
-const { data: posts, status } = await useAsyncData("posts", fetchPosts);
+const { data: posts, status } = await useAsyncData('posts', fetchPosts);
 
 useHead({
-  title: "Posts",
+  title: 'Posts',
 });
 </script>
 

@@ -1,6 +1,6 @@
 export interface IAppBarItem {
-  name: string
-  url: string
+  name: string;
+  url: string;
 }
 
 export const AppBar_Data: IAppBarItem[] = [
@@ -13,4 +13,4 @@ export const AppBar_Data: IAppBarItem[] = [
     name: 'Posts',
     url: '/posts',
   },
-]
+];

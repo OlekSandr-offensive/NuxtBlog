@@ -1,5 +1,5 @@
-import type { IPost } from "../types/post";
-import type { IComments } from "../types/comment";
+import type { IPost } from '../types/post';
+import type { IComments } from '../types/comment';
 
 const config = useRuntimeConfig();
 const $api = config.public.baseURL;
@@ -8,13 +8,13 @@ const $api = config.public.baseURL;
 export const apiClient = $fetch.create({
   baseURL: $api,
   headers: {
-    "Content-Type": "application/json",
+    'Content-Type': 'application/json',
   },
   onResponseError({ response }) {
     if (response.status === 404) {
       throw createError({
         statusCode: 404,
-        statusMessage: "Page Not Found",
+        statusMessage: 'Page Not Found',
       });
     }
   },

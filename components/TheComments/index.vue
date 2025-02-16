@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-import { fetchComments } from "../../services/api";
+import { fetchComments } from '../../services/api';
 
 const { data: comments, status } = await useAsyncData(
-  "comments",
-  fetchComments,
+  'comments',
+  fetchComments
 );
 </script>
 
@@ -28,7 +28,7 @@ const { data: comments, status } = await useAsyncData(
             <strong>{{ comment.name }}</strong>
           </p>
           <p class="blog-post-meta">
-            {{ comment.createdAt.slice(0, -5).split("T").join(" ") }}
+            {{ comment.createdAt.slice(0, -5).split('T').join(' ') }}
           </p>
           <p>
             {{ comment.comment }}

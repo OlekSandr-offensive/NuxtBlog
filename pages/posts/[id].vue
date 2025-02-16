@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { fetchPostById } from "../../services/api";
+import { fetchPostById } from '../../services/api';
 
 const route = useRoute();
 const id = route.params.id as string;
@@ -8,17 +8,17 @@ const {
   data: post,
   status,
   error,
-} = await useAsyncData("post-" + id, () => fetchPostById(id));
+} = await useAsyncData('post-' + id, () => fetchPostById(id));
 
 if (!post.value) {
   throw createError({
     statusCode: 404,
-    statusMessage: "Page Not Found",
+    statusMessage: 'Page Not Found',
   });
 }
 
 useHead({
-  title: "Post",
+  title: 'Post',
 });
 </script>
 
@@ -37,7 +37,7 @@ useHead({
     <article v-if="post" class="blog-post">
       <h2 class="blog-post-title mb-1">{{ post.title }}</h2>
       <p class="blog-post-meta">
-        {{ post.createdAt.slice(0, -5).split("T").join(" ") }}
+        {{ post.createdAt.slice(0, -5).split('T').join(' ') }}
       </p>
       <p>
         <!-- Content of the article -->

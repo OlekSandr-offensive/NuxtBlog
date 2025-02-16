@@ -3,12 +3,14 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "prettier": "prettier",
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "lint": "eslint --ext .js,.json,.md,.vue,.ts,"
+    "lint": "eslint . --report-unused-disabled-directories --max-warnings 0",
+    "prepare": "husky"
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
@@ -17,14 +19,16 @@
     "vue-router": "latest"
   },
   "devDependencies": {
+    "@nuxt/eslint": "^1.0.1",
     "eslint": "^9.20.1",
-    "eslint-plugin-vue": "^9.32.0",
     "gh-pages": "^6.3.0",
     "husky": "^9.1.7",
-    "lint-staged": "^15.4.3"
+    "lint-staged": "^15.4.3",
+    "prettier": "^3.5.1",
+    "typescript": "^5.7.3"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,vue}": "eslint --cache --fix",
+    "*.{js,ts,tsx,vue}": "eslint --fix",
     "*.{js,jsx,ts,tsx,css,md,scss,vue,json,yml,yaml,html}": "prettier --write",
     "*.{css,scss}": "stylelint --fix"
   }

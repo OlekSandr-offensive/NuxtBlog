@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { AppBar_Data } from "./AppBar.data";
+import { AppBar_Data } from './AppBar.data';
 </script>
 
 <template>
