@@ -22,7 +22,7 @@ export const apiClient = $fetch.create({
 
 // Getting all posts
 export const fetchPosts = async () => {
-  const posts = await apiClient<IPost[]>(`${$api}/posts`);
+  const posts = await apiClient<IPost[]>('/posts');
   return posts;
 };
 
@@ -34,6 +34,6 @@ export const fetchPostById = async (id: string): Promise<IPost> => {
 
 // Getting all comments
 export const fetchComments = async (): Promise<IComments[]> => {
-  const comments = await apiClient<IComments[]>(`${$api}/comments`);
+  const comments = await apiClient<IComments[]>('/comments');
   return comments;
 };
