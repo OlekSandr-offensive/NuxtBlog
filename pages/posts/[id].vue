@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { fetchPostById } from '../../services/api';
+import { handleImageError } from '../../services/handleImageError';
 
 const route = useRoute();
 const id = route.params.id as string;
@@ -45,7 +46,7 @@ useHead({
       </p>
 
       <!-- Image -->
-      <img :src="post.image" alt="Article Image" />
+      <img :src="post.image" :alt="post.title" @error="handleImageError" />
       <hr />
     </article>
     <div v-else>No found</div>

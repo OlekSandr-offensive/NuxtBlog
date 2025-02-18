@@ -1,4 +1,6 @@
 import withNuxt from './.nuxt/eslint.config.mjs';
+import ESLintConfigPrettier from 'eslint-config-prettier';
+import prettierPlugin from 'eslint-plugin-prettier';
 
 export default withNuxt(
   { files: ['**/*.{js,ts,vue}'] },
@@ -8,6 +10,8 @@ export default withNuxt(
       'no-undef': 'off',
     },
   },
+  ESLintConfigPrettier,
+  { plugins: { prettier: prettierPlugin } },
   {
     ignores: [
       '**/node_modules/**',
