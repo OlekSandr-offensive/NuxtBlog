@@ -47,8 +47,7 @@ useHead({
 
       <!-- Image -->
       <img
-        width="640"
-        height="480"
+        class="img-fluid"
         :src="post.image"
         :alt="post.title"
         @error="handleImageError"
