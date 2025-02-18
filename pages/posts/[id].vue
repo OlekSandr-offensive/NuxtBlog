@@ -46,7 +46,13 @@ useHead({
       </p>
 
       <!-- Image -->
-      <img :src="post.image" :alt="post.title" @error="handleImageError" />
+      <img
+        width="640"
+        height="480"
+        :src="post.image"
+        :alt="post.title"
+        @error="handleImageError"
+      />
       <hr />
     </article>
     <div v-else>No found</div>
