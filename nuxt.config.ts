@@ -12,7 +12,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      baseURL: process.env.BASE_URL || '',
+      baseURL: 'https://62fe137ba85c52ee482f275b.mockapi.io/api/v1/',
     },
   },
 
